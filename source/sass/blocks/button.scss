@@ -1,0 +1,27 @@
+.button {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+
+  background-color: var(--second-extra-bg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+
+  padding: 8px 20px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--lighter-purple);
+  }
+
+  &:active {
+    background-color: var(--darker-purple);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-bg-color);
+  }
+}

@@ -4,15 +4,22 @@
   --gray: #bdbdbd;
   --dark: #333333;
   --purple: #7859cf;
+  --lighter-purple: #9070ec;
+  --darker-purple: #593cac;
   --lightest-lilac: #f0ebff;
   --lightest-gray: #f8f8f8;
+  --flat-white: #f3ebe1;
+  --lavender: #eae6fc;
 
   --primary-text-color: var(--dark);
   --extra-text-color: var(--purple);
+  --disabled-text-color: var(--gray);
 
   --primary-bg-color: var(--lightest-gray);
   --secondary-bg-color: var(--white);
-  --extra-bg-color: var(--lightest-lilac);
+  --first-extra-bg-color: var(--lightest-lilac);
+  --second-extra-bg-color: var(--purple);
+  --disabled-bg-color: var(--gray);
 
   // width
   --mobile-padding-left: 17px;

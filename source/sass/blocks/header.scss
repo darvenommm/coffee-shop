@@ -103,7 +103,7 @@
   }
 
   &:active {
-    background-color: var(--extra-bg-color);
+    background-color: var(--first-extra-bg-color);
   }
 
   @media (min-width: variables.$tablet-width) {

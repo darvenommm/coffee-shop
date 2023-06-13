@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Drink2Go</title>
+    <title>Магазин кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -87,6 +87,134 @@
         </ul>
       </div>
     </header>
-    <script src="./js/script.js" defer></script>
+    <main>
+      <section class="hero hero--flat-white">
+        <div class="hero__container container">
+          <h2 class="visually-hidden">Наши новинки.</h2>
+          <p class="hero__badge badge">Новинка!</p>
+          <ul class="hero__items">
+            <li class="hero__item hero__item--active">
+              <picture class="hero__image">
+                <source
+                  media="(min-width:1440px)"
+                  width="600"
+                  height="600"
+                  srcset="./img/hero/flat-white/flat-white-desktop@2x.webp 2x, ./img/hero/flat-white/flat-white-desktop@1x.webp 1x"
+                  type="image/webp"
+                >
+                <source
+                  media="(min-width:1440px)"
+                  width="600"
+                  height="600"
+                  srcset="./img/hero/flat-white/flat-white-desktop@2x.png 2x, ./img/hero/flat-white/flat-white-desktop@1x.png 1x"
+                  type="image/png"
+                >
+                <source
+                  media="(min-width:768px)"
+                  width="476"
+                  height="476"
+                  srcset="./img/hero/flat-white/flat-white-tablet@2x.webp 2x, ./img/hero/flat-white/flat-white-tablet@1x.webp 1x"
+                  type="image/webp"
+                >
+                <source
+                  media="(min-width:768px)"
+                  width="476"
+                  height="476"
+                  srcset="./img/hero/flat-white/flat-white-tablet@2x.png 2x, ./img/hero/flat-white/flat-white-tablet@1x.png 1x"
+                  type="image/png"
+                >
+                <source
+                  width="280"
+                  height="280"
+                  srcset="./img/hero/flat-white/flat-white-mobile@2x.webp 2x, ./img/hero/flat-white/flat-white-mobile@1x.webp 1x"
+                  type="image/webp"
+                >
+                <img
+                  width="280"
+                  height="280"
+                  srcset="./img/hero/flat-white/flat-white-mobile@2x.png 2x, ./img/hero/flat-white/flat-white-mobile@1x.png 1x"
+                  alt="Банка бежевого цвета с кофе."
+                  type="image/png"
+                >
+              </picture>
+              <h2 class="hero__title">Декаф Флэт Уайт</h2>
+              <p class="hero__description">
+                Свежесваренный кофе без кофеина из&nbsp;Эфиопии<br>
+                с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
+                для&nbsp;расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="hero__bottom-container">
+                <div class="hero__price-container">
+                  <span class="hero__price hero__old-price">295₽</span>
+                  <span class="hero__price hero__current-price">225₽</span>
+                </div>
+                <a class="button" href="/buy-product/1">Заказать</a>
+              </div>
+            </li>
+            <li class="hero__item">
+              <picture class="hero__image"></picture>
+              <h2 class="hero__title">Лавандовый Латте</h2>
+              <p class="hero__description">
+                Невероятное сочетание перуанской высокогорной арабики
+                с&nbsp;молоком ламы и&nbsp;лавандовым сиропом унесёт
+                вас прямо на&nbsp;вершину Радужных гор
+              </p>
+              <div class="hero__bottom-container">
+                <div class="hero__price-container">
+                  <span class="hero__price hero__old-price">285₽</span>
+                  <span class="hero__price hero__current-price">265₽</span>
+                </div>
+                <a class="button" href="/buy-product/2">Заказать</a>
+              </div>
+            </li>
+            <li class="hero__item">
+              <picture class="hero__image"></picture>
+              <h2 class="hero__title">Тройной Экспрессо</h2>
+              <p class="hero__description">
+                Мощнее укола адреналина, чернее самой тёмной ночи,
+                этот тройной эспрессо из&nbsp;Колумбии покажет вам,
+                что такое настоящая бодрость
+              </p>
+              <div class="hero__bottom-container">
+                <div class="hero__price-container">
+                  <span class="hero__price hero__old-price">395₽</span>
+                  <span class="hero__price hero__current-price">375₽</span>
+                </div>
+                <a class="button" href="/buy-product/3">Заказать</a>
+              </div>
+            </li>
+          </ul>
+          <button class="hero__arrow hero__previous" type="button">
+            <svg width="11" height="20" aria-hidden="true">
+              <use xlink:href="./img/icons/stack.svg#arrow-left"></use>
+            </svg>
+            <span class="visually-hidden">Нажми, чтобы перейти на предыдущий продукт.</span>
+          </button>
+          <button class="hero__arrow hero__next" type="button">
+            <svg width="11" height="20" aria-hidden="true">
+              <use xlink:href="./img/icons/stack.svg#arrow-right"></use>
+            </svg>
+            <span class="visually-hidden">Нажми, чтобы перейти на следующий продукт.</span>
+          </button>
+          <ul class="hero__pagination">
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button hero__pagination-button--active" type="button" tabindex="-1">
+                <span class="visually-hidden">Нажми, чтобы перейти на первый продукт.</span>
+              </button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button" type="button">
+                <span class="visually-hidden">Нажми, чтобы перейти на второй продукт.</span>
+              </button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button" type="button">
+                <span class="visually-hidden">Нажми, чтобы перейти на третий продукт.</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
