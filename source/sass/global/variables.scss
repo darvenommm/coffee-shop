@@ -1,1 +1,25 @@
-/* здесь используйте глобальные переменные */
+:root {
+  // color
+  --white: #ffffff;
+  --gray: #bdbdbd;
+  --dark: #333333;
+  --purple: #7859cf;
+  --lightest-lilac: #f0ebff;
+  --lightest-gray: #f8f8f8;
+
+  --primary-text-color: var(--dark);
+  --extra-text-color: var(--purple);
+
+  --primary-bg-color: var(--lightest-gray);
+  --secondary-bg-color: var(--white);
+  --extra-bg-color: var(--lightest-lilac);
+
+  // width
+  --mobile-padding-left: 17px;
+  --mobile-padding-right: 23px;
+  --tablet-padding: 20px;
+  --desktop-padding: 20px;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1440px;

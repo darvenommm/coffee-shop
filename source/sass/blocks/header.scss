@@ -1,5 +1,179 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+@use "../helpers/helpers";
+@use "../global/variables";
+
+.header__container {
+  display: grid;
+  grid-template-areas:
+    "header-logo header-buttons"
+    "header-navigation header-navigation";
+  align-items: center;
+
+  padding-right: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    @include helpers.container;
+  }
+}
+
+// logo
+.header__logo-container {
+  display: flex;
+  align-items: center;
+
+  padding-left: var(--mobile-padding-left);
+
+  grid-area: header-logo;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.header__title {
+  @media (max-width: variables.$desktop-width) {
+    @include helpers.visually-hidden;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+// navigation
+.header__navigation {
+  grid-area: header-navigation;
+
+  &--with-js {
+    @include helpers.visually-hidden;
+  }
+}
+
+.header__links {
+  @include helpers.reset-list;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
+}
+
+.header__link {
+  position: relative;
+
+  display: block;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+
+  outline: none;
+
+  padding: 20px 0;
+  border-bottom: 1px solid var(--lightest-lilac);
+
+  &:first-child {
+    border-top: 1px solid var(--lightest-lilac);
+  }
+
+  &--current {
+    color: var(--extra-text-color);
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: var(--extra-text-color);
+
+      height: 2px;
+
+      content: "";
+    }
+  }
+
+  &:active {
+    background-color: var(--extra-bg-color);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+    padding: 32px 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--extra-text-color);
+    }
+  }
+}
+
+// buttons
+.header__buttons {
+  display: flex;
+  justify-self: end;
+
+  @include helpers.reset-list;
+
+  grid-area: header-buttons;
+}
+
+.header__button-burger {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+
+  outline: none;
+
+  padding: 22px;
+
+  &:active {
+    background-color: var(--lightest-lilac);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:hover,
+    &:active,
+    &:focus-visible {
+      color: var(--extra-text-color);
+    }
+  }
+}
+
+.header__button-text {
+  display: none;
+
+  margin-left: 8px;
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+  }
 }

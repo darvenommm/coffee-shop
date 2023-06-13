@@ -1,0 +1,15 @@
+@use "../global/variables";
+
+@mixin container {
+  padding: 0 var(--mobile-padding-left) 0 var(--mobile-padding-right);
+  margin: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 var(--tablet-padding);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 var(desktop-padding);
+    max-width: 1360px;
+  }
+}
