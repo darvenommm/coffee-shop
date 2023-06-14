@@ -9,7 +9,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 var(desktop-padding);
-    max-width: 1360px;
+    padding: 0 var(--desktop-padding);
+    max-width: 1440px;
   }
 }

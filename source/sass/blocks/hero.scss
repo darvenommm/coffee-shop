@@ -1,18 +1,24 @@
 @use "../helpers/helpers";
 @use "../global/variables";
 
-$desktop-left-padding: 695px;
-
 .hero {
   &--flat-white {
     background-color: var(--flat-white);
+  }
+
+  &--lavender {
+    background-color: var(--lavender);
+  }
+
+  &--espresso {
+    background-color: var(--espresso);
   }
 }
 
 .hero__container {
   position: relative;
 
-  padding-top: 310px;
+  padding-top: 20px;
   padding-bottom: 60px;
 
   @media (min-width: variables.$tablet-width) {
@@ -22,22 +28,9 @@ $desktop-left-padding: 695px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 180px;
-    padding-bottom: 242px;
+    padding-top: 30px;
+    padding-bottom: 84px;
     margin-bottom: 0;
-  }
-}
-
-.hero__badge {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 4px;
-
-  @media (min-width: variables.$desktop-width) {
-    justify-content: start;
-
-    padding-left: $desktop-left-padding;
   }
 }
 
@@ -49,31 +42,64 @@ $desktop-left-padding: 695px;
   display: none;
 
   &--active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-left: $desktop-left-padding;
+    flex-direction: row;
+
+    padding-left: 65px;
+    padding-right: 40px;
   }
 }
 
 .hero__image {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 
   display: flex;
   justify-content: center;
 
+  margin-bottom: 10px;
+
   @media (min-width: variables.$tablet-width) {
-    top: 352px;
+    img {
+      position: absolute;
+      top: 20px;
+    }
+
+    order: 10;
   }
 
   @media (min-width: variables.$desktop-width) {
-    top: 30px;
-    left: 65px;
-    transform: none;
+    img {
+      position: relative;
+    }
+
+    order: -1;
+
+    margin: 0;
+    margin-right: 30px;
+  }
+}
+
+.hero__content {
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 180px;
+  }
+}
+
+.hero__badge {
+  text-align: center;
+
+  margin-bottom: 4px;
+
+  @media (min-width: variables.$desktop-width) {
+    text-align: start;
   }
 }
 
@@ -107,17 +133,9 @@ $desktop-left-padding: 695px;
   margin: 0;
   margin-bottom: 20px;
 
-  br {
-    display: none;
-  }
-
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 32px;
-
-    br {
-      display: block;
-    }
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -191,8 +209,8 @@ $desktop-left-padding: 695px;
   left: 0;
   padding-left: 5px;
 
-  &:hover,
-  &:focus-visible {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible {
     background: linear-gradient(
       90deg,
       #ffffff 0%,
@@ -200,7 +218,7 @@ $desktop-left-padding: 695px;
     );
   }
 
-  &:active {
+  &:not(:disabled):active {
     background: linear-gradient(
       90deg,
       rgba(120, 89, 207, 0.25) 0%,
@@ -213,8 +231,8 @@ $desktop-left-padding: 695px;
   right: 0;
   padding-right: 5px;
 
-  &:hover,
-  &:focus-visible {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible {
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0) 0%,
@@ -222,7 +240,7 @@ $desktop-left-padding: 695px;
     );
   }
 
-  &:active {
+  &:not(:disabled):active {
     background: linear-gradient(
       90deg,
       rgba(120, 89, 207, 0) 0%,
@@ -233,7 +251,7 @@ $desktop-left-padding: 695px;
 
 .hero__pagination {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 
