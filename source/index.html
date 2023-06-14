@@ -198,6 +198,7 @@
                 >
               </picture>
               <div class="hero__content">
+                <p class="hero__badge badge">Новинка!</p>
                 <h2 class="hero__title">Лавандовый Латте</h2>
                 <p class="hero__description">
                   Невероятное сочетание перуанской высокогорной арабики
@@ -258,6 +259,7 @@
                 >
               </picture>
               <div class="hero__content">
+                <p class="hero__badge badge">Новинка!</p>
                 <h2 class="hero__title">Тройной Экспрессо</h2>
                 <p class="hero__description">
                   Мощнее укола адреналина, чернее самой тёмной ночи,
@@ -339,7 +341,393 @@
           </ul>
         </div>
       </section>
+      <section class="catalog">
+        <div class="container">
+          <p class="catalog__badge badge">Каталог</p>
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
+          <div class="catalog__inner-container">
+            <form
+              class="catalog-form"
+              action="https://echo.htmlacademy.ru"
+              method="get"
+            >
+              <h3 class="visually-hidden">
+                Форма для выбора подходящий товаров в каталоге.
+              </h3>
+              <div class="catalog-form__container">
+                <fieldset class="catalog-form__fieldset">
+                  <legend class="visually-hidden">Цена.</legend>
+                  <p class="catalog-form__title" aria-hidden="true">Цена</p>
+                  <div class="catalog-form__price-slider" aria-hidden="true">Slider</div>
+                  <div class="catalog-form__price-inputs">
+                    <label class="visually-hidden" for="min-price">Минимальная цена.</label>
+                    <input
+                      class="catalog-form__price-input"
+                      id="min-price"
+                      type="number"
+                      name="min-price"
+                      min="0"
+                      placeholder="0"
+                      required
+                    >
+                    <label class="visually-hidden" for="max-price">Максимальная цена.</label>
+                    <input
+                      class="catalog-form__price-input"
+                      id="max-price"
+                      type="number"
+                      name="max-price"
+                      min="1"
+                      placeholder="10 000"
+                      required
+                    >
+                  </div>
+                </fieldset>
+                <fieldset class="catalog-form__fieldset">
+                  <legend class="visually-hidden">Наличие молока</legend>
+                  <p class="catalog-form__title" aria-hidden="true">Наличие молока</p>
+                  <ul class="catalog-form__milk-items">
+                    <li class="catalog-form__milk-item">
+                      <input
+                        class="catalog-form__milk-input visually-hidden"
+                        type="radio"
+                        id="milk-not-matter"
+                        name="milk"
+                        value="not-matter"
+                        checked
+                      >
+                      <label class="catalog-form__milk-label" for="milk-not-matter">Неважно</label>
+                    </li>
+                    <li class="catalog-form__milk-item">
+                      <input
+                        class="catalog-form__milk-input visually-hidden"
+                        type="radio"
+                        id="milk-animal"
+                        value="animal"
+                        name="milk"
+                      >
+                      <label class="catalog-form__milk-label" for="milk-animal">Только животное</label>
+                    </li>
+                    <li class="catalog-form__milk-item">
+                      <input
+                        class="catalog-form__milk-input visually-hidden"
+                        type="radio"
+                        id="milk-plant"
+                        value="plant"
+                        name="milk"
+                      >
+                      <label class="catalog-form__milk-label" for="milk-plant">Только растительное</label>
+                    </li>
+                    <li class="catalog-form__milk-item">
+                      <input
+                        class="catalog-form__milk-input visually-hidden"
+                        type="radio"
+                        id="milk-without"
+                        name="milk"
+                        value="without"
+                        disabled
+                      >
+                      <label class="catalog-form__milk-label" for="milk-without">Без молока</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-form__fieldset">
+                  <legend class="visually-hidden">Страна произрастания.</legend>
+                  <p class="catalog-form__title" aria-hidden="true">
+                    Страна произрастания
+                  </p>
+                  <ul class="catalog-form__country-items">
+                    <li class="catalog-form__country-item">
+                      <input
+                        class="catalog-form__country-input visually-hidden"
+                        id="country-brazil"
+                        type="checkbox"
+                        name="brazil"
+                      >
+                      <label class="catalog-form__country-label" for="country-brazil">Бразилия</label>
+                    </li>
+                    <li class="catalog-form__country-item">
+                      <input
+                        class="catalog-form__country-input visually-hidden"
+                        id="country-ethiopia"
+                        type="checkbox"
+                        name="ethiopia"
+                      >
+                      <label class="catalog-form__country-label" for="country-ethiopia">Эфиопия</label>
+                    </li>
+                    <li class="catalog-form__country-item">
+                      <input
+                        class="catalog-form__country-input visually-hidden"
+                        id="country-colombia"
+                        type="checkbox"
+                        name="colombia"
+                      >
+                      <label class="catalog-form__country-label" for="country-colombia">Колумбия</label>
+                    </li>
+                    <li class="catalog-form__country-item">
+                      <input
+                        class="catalog-form__country-input visually-hidden"
+                        id="country-costa-rice"
+                        type="checkbox"
+                        name="costa-rica"
+                      >
+                      <label class="catalog-form__country-label" for="country-costa-rice">Коста-Рика</label>
+                    </li>
+                    <li class="catalog-form__country-item">
+                      <input
+                        class="catalog-form__country-input visually-hidden"
+                        id="country-peru"
+                        type="checkbox"
+                        name="Peru"
+                        disabled
+                      >
+                      <label class="catalog-form__country-label" for="country-peru">Перу</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog-form__buttons">
+                <button class="catalog-form__submit button" type="submit">
+                  Применить
+                </button>
+                <button class="catalog-form__reset extra-button" type="reset">
+                  Сбросить
+                </button>
+              </div>
+            </form>
+            <div class="catalog-content">
+              <h3 class="visually-hidden">Товары.</h3>
+              <p class="catalog-content__sort">
+                <label class="catalog-content__sort-label" for="sort">Сортировать:</label>
+                <select class="catalog-content__sort-select" id="sort" name="sort">
+                  <option value="default">по умолчанию</option>
+                </select>
+              </p>
+              <ul class="catalog-content__items">
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-1@2x.webp 2x, ./img/goods/coffee-1@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-1@2x.jpg 2x, ./img/goods/coffee-1@1x.jpg 1x"
+                      src="./img/goods/coffee-1@1x.jpg"
+                      alt="Банка бежевого цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/1">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-2@2x.webp 2x, ./img/goods/coffee-2@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-2@2x.jpg 2x, ./img/goods/coffee-2@1x.jpg 1x"
+                      src="./img/goods/coffee-2@1x.jpg"
+                      alt="Банка лавандового цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/2">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-3@2x.webp 2x, ./img/goods/coffee-3@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-3@2x.jpg 2x, ./img/goods/coffee-3@1x.jpg 1x"
+                      src="./img/goods/coffee-3@1x.jpg"
+                      alt="Банка черног4 цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/3">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-4@2x.webp 2x, ./img/goods/coffee-4@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-4@2x.jpg 2x, ./img/goods/coffee-4@1x.jpg 1x"
+                      src="./img/goods/coffee-4@1x.jpg"
+                      alt="Банка маливоного цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/4">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-5@2x.webp 2x, ./img/goods/coffee-5@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-5@2x.jpg 2x, ./img/goods/coffee-5@1x.jpg 1x"
+                      src="./img/goods/coffee-5@1x.jpg"
+                      alt="Банка коричневого цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/5">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+                <li class="catalog-content__item">
+                  <picture class="catalog-content__image">
+                    <source
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-6@2x.webp 2x, ./img/goods/coffee-6@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="130"
+                      height="188"
+                      srcset="./img/goods/coffee-6@2x.jpg 2x, ./img/goods/coffee-6@1x.jpg 1x"
+                      src="./img/goods/coffee-6@1x.jpg"
+                      alt="Банка жёлтого цвета с кофе."
+                    >
+                  </picture>
+                  <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-content__description">
+                    Кофе без кофеина из&nbsp;Эфиопии
+                    с&nbsp;натуральным фермерским молоком
+                  </p>
+                  <div class="catalog-content__price-container">
+                    <p class="catalog-content__price">225₽</p>
+                    <a class="catalog-content__price-button button" href="/goods/6">
+                      <svg width="20" height="16" aria-hidden="true">
+                        <use xlink:href="./img/icons/stack.svg#in-cart"></use>
+                      </svg>
+                      В корзину
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <div class="catalog-content__pagination">
+                <button class="catalog-content__pagination-control catalog-content__pagination-control--previous catalog-content__pagination-control--hidden extra-button" type="button">
+                  <span class="visually-hidden">Нажми, чтобы перейти на предыдущую страницу.</span>
+                  <span class="catalog-content__pagination-text" aria-hidden="true">Назад</span>
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/icons/stack.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <ol class="catalog-content__pagination-items">
+                  <li class="catalog-content__pagination-item">
+                    <button class="catalog-content__pagination-button catalog-content__pagination-button--active extra-button" type="button" tabindex="-1">
+                      1 <span class="visually-hidden">страница</span>
+                    </button>
+                  </li>
+                  <li class="catalog-content__pagination-item">
+                    <button class="catalog-content__pagination-button extra-button" type="button">
+                      2 <span class="visually-hidden">страница</span>
+                    </button>
+                  </li>
+                  <li class="catalog-content__pagination-item">
+                    <button class="catalog-content__pagination-button extra-button" type="button">
+                      3 <span class="visually-hidden">страница</span>
+                    </button>
+                  </li>
+                </ol>
+                <button class="catalog-content__pagination-control catalog-content__pagination-control--next extra-button" type="button">
+                  <span class="visually-hidden">Нажми, чтобы перейти на следующую страницу.</span>
+                  <span class="catalog-content__pagination-text" aria-hidden="true">Вперёд</span>
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="./js/hero.js" defer></script>
+    <script src="./js/hero.js" async></script>
   </body>
 </html>
