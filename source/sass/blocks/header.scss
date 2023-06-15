@@ -51,7 +51,7 @@
 .header__navigation {
   grid-area: header-navigation;
 
-  &--with-js {
+  &--hidden {
     @include helpers.visually-hidden;
   }
 }
@@ -130,9 +130,25 @@
   grid-area: header-buttons;
 }
 
-.header__button-burger {
+.header__burger-container {
   @media (min-width: variables.$tablet-width) {
     display: none;
+  }
+}
+
+.header__burger {
+  .header__burger-open{
+    display: none;
+  }
+
+  &--closed-menu {
+    .header__burger-open {
+      display: block;
+    }
+
+    .header__burger-close {
+      display: none;
+    }
   }
 }
 

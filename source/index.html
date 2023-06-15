@@ -75,10 +75,13 @@
               <span class="header__button-text" aria-hidden="true">Корзина</span>
             </a>
           </li>
-          <li class="header__button-burger">
-            <a class="header__button" href="#">
-              <svg width="16" height="16" aria-hidden="true">
+          <li class="header__burger-container">
+            <a class="header__button header__burger" href="#">
+              <svg class="header__burger-open" width="16" height="16" aria-hidden="true">
                 <use xlink:href="./img/icons/stack.svg#burger-open"></use>
+              </svg>
+              <svg class="header__burger-close" width="16" height="16" aria-hidden="true">
+                <use xlink:href="./img/icons/stack.svg#burger-close"></use>
               </svg>
               <span class="visually-hidden">
                 Кнопка для открытия навигационных ссылок.
@@ -832,7 +835,8 @@
         </p>
       </div>
     </footer>
-    <script src="./js/hero.js" async></script>
+    <script src="./js/burger.js" async></script>
+    <script src="./js/slider.js" async></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
     <script src="./js/map.js" defer></script>
   </body>
