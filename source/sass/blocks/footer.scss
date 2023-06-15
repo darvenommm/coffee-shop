@@ -173,6 +173,8 @@
   color: inherit;
   text-decoration: none;
 
+  outline: none;
+
   padding: 8px 0;
 
   &:hover,
@@ -221,6 +223,8 @@
   color: inherit;
   text-decoration: none;
 
+  outline: none;
+
   &::before {
     position: absolute;
     left: -22px;
@@ -259,6 +263,8 @@
 
   color: var(--gray);
   text-decoration: none;
+
+  outline: none;
 
   padding: 20px 0 30px;
 
