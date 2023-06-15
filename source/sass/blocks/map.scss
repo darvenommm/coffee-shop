@@ -1,0 +1,21 @@
+@use "../global/variables";
+
+.map__container {
+  width: 100%;
+  height: 420px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 540px;
+  }
+}
+
+// To remove the flag of Ukraine, if it's not important, you can remove
+// important is necessary to overlap other styles
+.leaflet-control svg {
+  // stylelint-disable declaration-no-important
+  display: none !important;
+}
