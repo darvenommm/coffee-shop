@@ -733,6 +733,105 @@
         <div class="map__container"></div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper footer__wrapper-social">
+        <a class="footer__logo">
+          <picture class="footer__logo-image">
+            <source
+              width="170"
+              height="36"
+              media="(min-width:768px)"
+              srcset="./img/logo/logo-desktop.svg"
+              type="image/svg+xml"
+            >
+            <img
+              width="82"
+              height="36"
+              src="./img/logo/logo-tablet.svg"
+              alt="Логотип нашего сайта."
+            >
+          </picture>
+        </a>
+        <ul class="footer__social-items">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+              <span class="visually-hidden">Вконтакте.</span>
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./img/icons/stack.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+              <span class="visually-hidden">Пинтерест.</span>
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./img/icons/stack.svg#pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+              <span class="visually-hidden">Одноклассники.</span>
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./img/icons/stack.svg#ok"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper footer__wrapper-links">
+        <p class="footer__title">Интернет-магазин</p>
+        <ul class="footer__items">
+          <li class="footer__item">
+            <a class="footer__link" href="/catalog">Каталог</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/delivery">Доставка</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/pay-way">Способы оплаты</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/about">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper footer__wrapper-media">
+        <p class="footer__title">Медиа</p>
+        <ul class="footer__items">
+          <li class="footer__item">
+            <a class="footer__link" href="/blog">Блог</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/mass-media">Информация для СМИ</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/info">Правовая информация</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper footer__wrapper-address">
+        <p class="footer__title">Контакты</p>
+        <address class="footer__address">
+          <p class="footer__address-text">
+            Санкт-Петербург, набережная реки Карповки, дом 5
+          </p>
+          <a class="footer__address-tel" href="tel:+79999999999">
+            +7 (999) 999-99-99
+          </a>
+        </address>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          <a class="footer__copyright-link" href="" target="_blank" rel="noopener noreferrer">
+            Разработано в HTML Academy
+            <svg width="12" height="16" aria-hidden="true">
+              <use xlink:href="./img/icons/stack.svg#html-academy"></use>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </footer>
     <script src="./js/hero.js" async></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
     <script src="./js/map.js" defer></script>

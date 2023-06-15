@@ -1,15 +1,19 @@
 @use "../global/variables";
 
 @mixin container {
-  padding: 0 var(--mobile-padding-left) 0 var(--mobile-padding-right);
-  margin: auto;
+  padding-left: var(--mobile-padding-left);
+  padding-right: var(--mobile-padding-right);
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 var(--tablet-padding);
+    padding-left: var(--tablet-padding);
+    padding-right: var(--tablet-padding);
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 var(--desktop-padding);
+    padding-left: var(--desktop-padding);
+    padding-right: var(--desktop-padding);
+    margin-right: auto;
+    margin-left: auto;
     max-width: 1440px;
   }
 }
