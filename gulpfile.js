@@ -15,12 +15,14 @@ import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+import htmlmin from 'gulp-htmlmin';
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup () {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 

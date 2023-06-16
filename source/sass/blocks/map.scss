@@ -16,9 +16,11 @@
 }
 
 .map__image {
-  object-fit: fill;
+  img {
+    object-fit: fill;
 
-  width: 100%;
+    width: 100%;
+  }
 }
 
 // To remove the flag of Ukraine, if it's not important, you can remove
