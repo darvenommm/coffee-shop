@@ -4,7 +4,7 @@
 .benefits {
   background-color: var(--secondary-bg-color);
 
-  padding: 50px 0 60px;
+  padding: 48px 0 60px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 60px 0 100px;
@@ -61,7 +61,7 @@
   position: relative;
 
   padding-top: 65px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 
   &:last-child {
     margin-bottom: 0;

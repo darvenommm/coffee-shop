@@ -1,0 +1,87 @@
+.noUi-target {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  border: none;
+}
+
+.noUi-base {
+  cursor: pointer;
+}
+
+[disabled] .noUi-base {
+  cursor: not-allowed;
+}
+
+.noUi-connects {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-radius: 0;
+  background-color: var(--lighter-gray);
+
+  height: 4px;
+}
+
+.noUi-connect {
+  background-color: var(--lighter-purple);
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -4px;
+
+  border-radius: 50%;
+  cursor: grab;
+
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--lighter-purple);
+  outline: none;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    display: none;
+
+    background-color: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+
+    width: 16px;
+    height: 16px;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      display: block;
+    }
+  }
+
+  &:active {
+    cursor: grabbing;
+
+    &::before {
+      display: block;
+
+      background-color: var(--purple);
+    }
+  }
+}
+
+[disabled].noUi-horizontal .noUi-handle {
+  cursor: not-allowed;
+
+  border-color: var(--gray);
+
+  &::before {
+    display: none;
+  }
+}

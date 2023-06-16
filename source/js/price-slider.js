@@ -12,7 +12,6 @@
     start: [100, 2000],
     margin: 1,
     connect: true,
-    cssPrefix: 'price-slider__',
     format: {
       to: (value) => {
         return parseInt(value)

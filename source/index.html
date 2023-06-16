@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Магазин кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
@@ -362,7 +363,7 @@
                 <fieldset id="catalog-form__price-container" class="catalog-form__fieldset">
                   <legend class="visually-hidden">Цена.</legend>
                   <p class="catalog-form__title" aria-hidden="true">Цена</p>
-                  <div class="catalog-form__price-slider price-slider" aria-hidden="true"></div>
+                  <div class="catalog-form__price-slider" aria-hidden="true"></div>
                   <div class="catalog-form__price-inputs">
                     <label class="visually-hidden" for="min-price">Минимальная цена.</label>
                     <input
@@ -710,7 +711,7 @@
                 </li>
               </ul>
               <div class="catalog-content__pagination">
-                <button class="catalog-content__pagination-control catalog-content__pagination-control--previous catalog-content__pagination-control--hidden extra-button" type="button">
+                <button class="catalog-content__pagination-control catalog-content__pagination-control--previous extra-button" type="button">
                   <span class="visually-hidden">Нажми, чтобы перейти на предыдущую страницу.</span>
                   <span class="catalog-content__pagination-text" aria-hidden="true">Назад</span>
                   <svg width="10" height="10" aria-hidden="true">
@@ -719,12 +720,12 @@
                 </button>
                 <ol class="catalog-content__pagination-items">
                   <li class="catalog-content__pagination-item">
-                    <button class="catalog-content__pagination-button catalog-content__pagination-button--active extra-button" type="button" tabindex="-1">
+                    <button class="catalog-content__pagination-button extra-button" type="button" tabindex="-1">
                       1 <span class="visually-hidden">страница</span>
                     </button>
                   </li>
                   <li class="catalog-content__pagination-item">
-                    <button class="catalog-content__pagination-button extra-button" type="button">
+                    <button class="catalog-content__pagination-button catalog-content__pagination-button--active extra-button" type="button">
                       2 <span class="visually-hidden">страница</span>
                     </button>
                   </li>
@@ -770,6 +771,7 @@
             >
           </picture>
         </a>
+        <p class="footer__logo-text">Интернет-магазин кофейных напитков</p>
         <ul class="footer__social-items">
           <li class="footer__social-item">
             <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
@@ -829,7 +831,7 @@
         </ul>
       </div>
       <div class="footer__wrapper footer__wrapper-address">
-        <p class="footer__title">Контакты</p>
+        <p class="footer__title footer__title-address">Контакты</p>
         <address class="footer__address">
           <p class="footer__address-text">
             Санкт-Петербург, набережная реки Карповки, дом 5

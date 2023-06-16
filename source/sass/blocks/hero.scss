@@ -206,7 +206,7 @@
 }
 
 .hero__previous {
-  left: 0;
+  left: -6px;
   padding-left: 5px;
 
   &:not(:disabled):hover,
@@ -228,7 +228,7 @@
 }
 
 .hero__next {
-  right: 0;
+  right: 3px;
   padding-right: 5px;
 
   &:not(:disabled):hover,

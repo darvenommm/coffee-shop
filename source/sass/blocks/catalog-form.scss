@@ -2,7 +2,7 @@
 @use "../global/variables";
 
 .catalog-form {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 44px;
@@ -31,7 +31,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .catalog-form__title {
@@ -44,7 +44,8 @@
 }
 
 .catalog-form__price-slider {
-  margin-bottom: 24px;
+  margin: 0 9px;
+  margin-bottom: 26px;
 }
 
 // input

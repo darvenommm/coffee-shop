@@ -2,7 +2,7 @@
 @use "../global/variables";
 
 .footer {
-  padding-top: 20px;
+  padding-top: 30px;
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
@@ -131,6 +131,22 @@
   }
 }
 
+.footer__logo {
+  display: block;
+}
+
+.footer__logo-text {
+  font-size: 14px;
+  line-height: 20px;
+
+  margin: 0;
+  margin-bottom: 50px;
+
+  @media (max-width: (variables.$desktop-width - 1px)) {
+    @include helpers.visually-hidden;
+  }
+}
+
 .footer__social-items {
   display: grid;
   grid-template-columns: repeat(3, 40px);
@@ -160,6 +176,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.footer__title-address {
+  margin-bottom: 20px;
 }
 
 .footer__link {
@@ -192,7 +212,7 @@
   line-height: 20px;
   font-style: normal;
 
-  margin-left: 22px;
+  margin-left: 19px;
 
   grid-area: address;
 }
@@ -205,7 +225,7 @@
 
   &::before {
     position: absolute;
-    left: -22px;
+    left: -20px;
     top: 2px;
 
     background-image: url("../../img/icons/stack.svg#address-icon");
