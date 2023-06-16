@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Магазин кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -85,7 +87,7 @@
                 <use xlink:href="./img/icons/stack.svg#burger-close"></use>
               </svg>
               <span class="visually-hidden">
-                Кнопка для открытия навигационных ссылок.
+                Кнопка для открытия или закратия навигационных ссылок.
               </span>
             </a>
           </li>
@@ -200,6 +202,7 @@
                   srcset="./img/hero/lavender/lavender-mobile@2x.png 2x, ./img/hero/lavender/lavender-mobile@1x.png 1x"
                   src="./img/hero/lavender/lavender-mobile@1x.png"
                   alt="Банка лавандового цвета с кофе."
+                  loading="lazy"
                 >
               </picture>
               <div class="hero__content">
@@ -261,6 +264,7 @@
                   srcset="./img/hero/lavender/lavender-mobile@2x.png 2x, ./img/hero/lavender/lavender-mobile@1x.png 1x"
                   src="./img/hero/lavender/lavender-mobile@1x.png"
                   alt="Банка чёрного цвета с кофе."
+                  loading="lazy"
                 >
               </picture>
               <div class="hero__content">
@@ -295,7 +299,7 @@
           </button>
           <ul class="hero__pagination">
             <li class="hero__pagination-item">
-              <button class="hero__pagination-button hero__pagination-button--active" type="button" tabindex="-1">
+              <button class="hero__pagination-button hero__pagination-button--active" type="button">
                 <span class="visually-hidden">Нажми, чтобы перейти на первый продукт.</span>
               </button>
             </li>
@@ -363,7 +367,7 @@
                 <fieldset id="catalog-form__price-container" class="catalog-form__fieldset">
                   <legend class="visually-hidden">Цена.</legend>
                   <p class="catalog-form__title" aria-hidden="true">Цена</p>
-                  <div class="catalog-form__price-slider" aria-hidden="true"></div>
+                  <div class="catalog-form__price-slider"></div>
                   <div class="catalog-form__price-inputs">
                     <label class="visually-hidden" for="min-price">Минимальная цена.</label>
                     <input
@@ -399,6 +403,7 @@
                         name="milk"
                         value="not-matter"
                         checked
+                        required
                       >
                       <label class="catalog-form__milk-label" for="milk-not-matter">Неважно</label>
                     </li>
@@ -526,6 +531,7 @@
                         srcset="./img/goods/coffee-1@2x.jpg 2x, ./img/goods/coffee-1@1x.jpg 1x"
                         src="./img/goods/coffee-1@1x.jpg"
                         alt="Банка бежевого цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -559,6 +565,7 @@
                         srcset="./img/goods/coffee-2@2x.jpg 2x, ./img/goods/coffee-2@1x.jpg 1x"
                         src="./img/goods/coffee-2@1x.jpg"
                         alt="Банка лавандового цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -592,6 +599,7 @@
                         srcset="./img/goods/coffee-3@2x.jpg 2x, ./img/goods/coffee-3@1x.jpg 1x"
                         src="./img/goods/coffee-3@1x.jpg"
                         alt="Банка черног4 цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -625,6 +633,7 @@
                         srcset="./img/goods/coffee-4@2x.jpg 2x, ./img/goods/coffee-4@1x.jpg 1x"
                         src="./img/goods/coffee-4@1x.jpg"
                         alt="Банка маливоного цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -658,6 +667,7 @@
                         srcset="./img/goods/coffee-5@2x.jpg 2x, ./img/goods/coffee-5@1x.jpg 1x"
                         src="./img/goods/coffee-5@1x.jpg"
                         alt="Банка коричневого цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -691,6 +701,7 @@
                         srcset="./img/goods/coffee-6@2x.jpg 2x, ./img/goods/coffee-6@1x.jpg 1x"
                         src="./img/goods/coffee-6@1x.jpg"
                         alt="Банка жёлтого цвета с кофе."
+                        loading="lazy"
                       >
                     </picture>
                     <h3 class="catalog-content__title">Декаф Флэт Уайт</h3>
@@ -720,12 +731,12 @@
                 </button>
                 <ol class="catalog-content__pagination-items">
                   <li class="catalog-content__pagination-item">
-                    <button class="catalog-content__pagination-button extra-button" type="button" tabindex="-1">
+                    <button class="catalog-content__pagination-button extra-button" type="button">
                       1 <span class="visually-hidden">страница</span>
                     </button>
                   </li>
                   <li class="catalog-content__pagination-item">
-                    <button class="catalog-content__pagination-button catalog-content__pagination-button--active extra-button" type="button">
+                    <button class="catalog-content__pagination-button catalog-content__pagination-button--active extra-button" type="button" tabindex="-1">
                       2 <span class="visually-hidden">страница</span>
                     </button>
                   </li>
@@ -749,7 +760,52 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Место нашего магазина на карте.</h2>
-        <div class="map__container"></div>
+        <div class="map__container">
+          <picture class="map__image">
+            <source
+              media="(min-width:1440px)"
+              width="100%"
+              height="540"
+              srcset="./img/map/map-desktop@2x.webp 2x, ./img/map/map-desktop@1x.webp 1x"
+              type="image/webp"
+            >
+            <source
+              media="(min-width:1440px)"
+              width="100%"
+              height="540"
+              srcset="./img/map/map-desktop@2x.jpg 2x, ./img/map/map-desktop@1x.jpg 1x"
+              type="image/jpeg"
+            >
+            <source
+              media="(min-width:768px)"
+              width="100%"
+              height="480"
+              srcset="./img/map/map-tablet@2x.webp 2x, ./img/map/map-tablet@1x.webp 1x"
+              type="image/webp"
+            >
+            <source
+              media="(min-width:768px)"
+              width="100%"
+              height="480"
+              srcset="./img/map/map-tablet@2x.jpg 2x, ./img/map/map-tablet@1x.jpg 1x"
+              type="image/jpeg"
+            >
+            <source
+              width="100%"
+              height="420"
+              srcset="./img/map/map-mobile@2x.webp 2x, ./img/map/map-mobile@1x.webp 1x"
+              type="image/webp"
+            >
+            <img
+              width="100%"
+              height="420"
+              srcset="./img/map/map-mobile@2x.jpg 2x, ./img/map/map-mobile@1x.jpg 1x"
+              src="./img/map/map-mobile@1x.jpg"
+              alt="Адрес: Санкт-Петербург, набережная реки Карповки, дом 5"
+              loading="lazy"
+            >
+          </picture>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -774,7 +830,7 @@
         <p class="footer__logo-text">Интернет-магазин кофейных напитков</p>
         <ul class="footer__social-items">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer">
               <span class="visually-hidden">Вконтакте.</span>
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="./img/icons/stack.svg#vk"></use>
@@ -782,7 +838,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="footer__social-link" href="https://ru.pinterest.com/" target="_blank" rel="noopener noreferrer">
               <span class="visually-hidden">Пинтерест.</span>
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="./img/icons/stack.svg#pinterest"></use>
@@ -790,7 +846,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" target="_blank" rel="noopener noreferrer">
+            <a class="footer__social-link" href="https://ok.ru/" target="_blank" rel="noopener noreferrer">
               <span class="visually-hidden">Одноклассники.</span>
               <svg width="20" height="20" aria-hidden="true">
                 <use xlink:href="./img/icons/stack.svg#ok"></use>
@@ -843,7 +899,7 @@
       </div>
       <div class="footer__copyright">
         <p class="footer__copyright-text">
-          <a class="footer__copyright-link" href="" target="_blank" rel="noopener noreferrer">
+          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">
             Разработано в HTML Academy
             <svg width="12" height="16" aria-hidden="true">
               <use xlink:href="./img/icons/stack.svg#html-academy"></use>
@@ -854,9 +910,7 @@
     </footer>
     <script src="./js/burger.js" async></script>
     <script src="./js/slider.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" defer></script>
-    <script src="./js/price-slider.js" defer></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="./js/map.js" defer></script>
+    <script src="./js/price-slider.js" async></script>
+    <script src="./js/map.js" async></script>
   </body>
 </html>

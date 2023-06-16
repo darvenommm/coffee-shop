@@ -1,18 +1,22 @@
 /* GLOBAL */
-@use "global/fonts";
-@use "global/variables";
-@use "global/global";
+@import "global/variables";
+@import "global/global";
+@import "global/fonts";
+
+/* BASE STYLES FOR LIBRARIES */
+@import "lib/no-ui-slider/default";
+@import "lib/leaflet/default";
 
 /* BLOCKS */
-@use "blocks/badge";
-@use "blocks/button";
-@use "blocks/extra-button";
-@use "blocks/header";
-@use "blocks/hero";
-@use "blocks/benefits";
-@use "blocks/catalog";
-@use "blocks/catalog-form";
-@use "lib/no-ui-slider";
-@use "blocks/catalog-content";
-@use "blocks/map";
-@use "blocks/footer";
+@import "blocks/badge";
+@import "blocks/button";
+@import "blocks/extra-button";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/benefits";
+@import "blocks/catalog";
+@import "blocks/catalog-form";
+@import "lib/no-ui-slider/custom";
+@import "blocks/catalog-content";
+@import "blocks/map";
+@import "blocks/footer";

@@ -43,6 +43,7 @@
   // pagination
   const cleanPaginationButtons = () => {
     paginationButtons.forEach((button) => {
+      button.tabIndex = '0';
       button.classList.remove(activePaginationButtonClass);
     });
   };
@@ -52,6 +53,7 @@
 
     currentSlideIndex = index;
     paginationButtons[index].classList.add(activePaginationButtonClass);
+    paginationButtons[index].tabIndex = '-1';
   };
 
   // slide
