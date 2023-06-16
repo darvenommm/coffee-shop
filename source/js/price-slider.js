@@ -30,11 +30,19 @@
         maxInput.value = values[1];
       }
     });
+
+    minInput.addEventListener('change', () => {
+      slider.noUiSlider.set([minInput.value, maxInput.value]);
+    });
+
+    maxInput.addEventListener('change', () => {
+      slider.noUiSlider.set([minInput.value, maxInput.value]);
+    });
   };
 
   const script = document.createElement('script');
   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js';
   document.body.appendChild(script);
 
-  script.addEventListener('load', main)
+  script.addEventListener('load', main);
 }

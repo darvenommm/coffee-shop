@@ -35,5 +35,5 @@
   script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   document.body.appendChild(script);
 
-  script.addEventListener('load', main)
+  script.addEventListener('load', main);
 }

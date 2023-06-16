@@ -33,6 +33,7 @@
 
   @media (min-width: variables.$tablet-width) {
     padding-left: 0;
+    margin-right: 67px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -63,8 +64,12 @@
     @include helpers.visually-hidden;
   }
 
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 60px;
+  }
+
   @media (min-width: variables.$desktop-width) {
-    margin-right: auto;
+    margin-right: 162px;
   }
 }
 
@@ -72,11 +77,13 @@
   @include helpers.reset-list;
 
   @media (min-width: variables.$tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    gap: 0 20px;
+    gap: 20px;
   }
 }
 
@@ -138,15 +145,15 @@
 
 // buttons
 .header__buttons {
-  display: flex;
-  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   @include helpers.reset-list;
 
   grid-area: header-buttons;
 
   @media (min-width: variables.$desktop-width) {
-    gap: 0 20px;
+    gap: 20px;
   }
 }
 

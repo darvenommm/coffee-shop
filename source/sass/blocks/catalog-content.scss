@@ -185,6 +185,7 @@
 
 .catalog-content__pagination-items {
   display: flex;
+  flex-wrap: wrap;
 
   @include helpers.reset-list;
 }

@@ -92,7 +92,7 @@
 
   paginationButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      update(index)
+      update(index);
     });
   });
 
