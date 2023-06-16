@@ -77,7 +77,7 @@
 
   @media (min-width: variables.$desktop-width) {
     img {
-      position: relative;
+      position: static;
     }
 
     order: -1;
@@ -89,7 +89,7 @@
 
 .hero__content {
   @media (min-width: variables.$desktop-width) {
-    margin-top: 180px;
+    margin-top: 146px;
   }
 }
 
@@ -141,7 +141,7 @@
   @media (min-width: variables.$desktop-width) {
     text-align: start;
 
-    margin-bottom: 48px;
+    margin-bottom: 42px;
   }
 }
 
@@ -259,7 +259,7 @@
 
 .hero__pagination {
   position: absolute;
-  bottom: 30px;
+  bottom: 55px;
   left: 50%;
   transform: translateX(-50%);
 

@@ -16,6 +16,10 @@
 
     @include helpers.container;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    justify-content: start;
+  }
 }
 
 // logo
@@ -30,10 +34,14 @@
   @media (min-width: variables.$tablet-width) {
     padding-left: 0;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 163px;
+  }
 }
 
 .header__title {
-  @media (max-width: variables.$desktop-width) {
+  @media (max-width: (variables.$desktop-width - 1px)) {
     @include helpers.visually-hidden;
   }
 
@@ -54,6 +62,10 @@
   &--hidden {
     @include helpers.visually-hidden;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: auto;
+  }
 }
 
 .header__links {
@@ -61,6 +73,10 @@
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 0 20px;
   }
 }
 
@@ -128,6 +144,10 @@
   @include helpers.reset-list;
 
   grid-area: header-buttons;
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 0 20px;
+  }
 }
 
 .header__burger-container {
@@ -177,6 +197,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding: 32px 20px;
+
     &:hover,
     &:active,
     &:focus-visible {
