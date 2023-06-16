@@ -2,6 +2,8 @@
 @use "../global/variables";
 
 .catalog-content__sort {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,14 +25,21 @@
   font-size: 16px;
   line-height: 24px;
 
-  margin-right: 8px;
+  margin-right: 12px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .catalog-content__sort-select {
+  flex-shrink: 1;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: var(--extra-text-color);
+  font-family: inherit;
 
   background-color: inherit;
   cursor: pointer;
@@ -38,11 +47,17 @@
   border-radius: 4px;
 
   border: none;
-  width: 155px;
+  padding: 4px 0 4px 10px;
+  max-width: 162px;
 
   &:hover,
   &:focus-visible {
     background-color: var(--lightest-lilac);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: none;
+    padding: 4px 0 4px 10px;
   }
 }
 
@@ -71,7 +86,7 @@
   border-radius: 4px;
 
   padding: 40px 20px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   &:focus-within,
   &:hover {

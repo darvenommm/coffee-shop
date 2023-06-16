@@ -2,12 +2,12 @@
 @use "../global/variables";
 
 .footer {
-  padding-top: 30px;
+  padding-top: 35px;
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 30px;
+    gap: 0 22px;
     grid-template-areas:
       "social social social"
       "links media address"
@@ -51,7 +51,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -118,6 +118,7 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 0;
+    margin-left: 10px;
   }
 }
 

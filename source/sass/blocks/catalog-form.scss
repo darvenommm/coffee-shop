@@ -2,10 +2,10 @@
 @use "../global/variables";
 
 .catalog-form {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 44px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0 30px;
 
-    margin-bottom: 40px;
+    margin-bottom: 9px;
   }
 
   @media (min-width: variables.$desktop-width) {

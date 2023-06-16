@@ -31,9 +31,9 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 42px;
     line-height: 64px;
-  }
+ }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     margin-bottom: 40px;
   }
 }

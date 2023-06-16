@@ -24,7 +24,7 @@
   @media (min-width: variables.$tablet-width) {
     padding-top: 60px;
     padding-bottom: 308px;
-    margin-bottom: 188px;
+    margin-bottom: 178px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -225,6 +225,10 @@
       rgba(120, 89, 207, 0) 100%
     );
   }
+
+  @media (min-width: variables.$tablet-width) {
+    left: 30px;
+  }
 }
 
 .hero__next {
@@ -246,6 +250,10 @@
       rgba(120, 89, 207, 0) 0%,
       rgba(120, 89, 207, 0.25) 100%
     );
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    right: 30px;
   }
 }
 

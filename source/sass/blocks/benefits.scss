@@ -108,6 +108,16 @@
       left: 0;
       transform: none;
     }
+
+    &--speed,
+    &--energy {
+      padding-left: 82px;
+    }
+
+    &--speed::before,
+    &--energy::before {
+      left: 11px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {

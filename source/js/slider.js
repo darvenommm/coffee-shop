@@ -40,20 +40,6 @@
     });
   };
 
-  // buttons
-  const updateButtonsClasses = () => {
-    if (nowFirstSlide()) {
-      prevButton.disabled = true;
-      nextButton.disabled = false;
-    } else if (nowLastSlide()) {
-      nextButton.disabled = true;
-      prevButton.disabled = false;
-    } else {
-      prevButton.disabled = false;
-      nextButton.disabled = false;
-    }
-  };
-
   // pagination
   const cleanPaginationButtons = () => {
     paginationButtons.forEach((button) => {
@@ -79,12 +65,13 @@
     setRootClass(index);
     setActiveSlide(index);
     setActivePaginationButton(index);
-    updateButtonsClasses();
   };
 
   // Listeners
   nextButton.addEventListener('click', () => {
     if (nowLastSlide()) {
+      update(0);
+
       return;
     }
 
@@ -93,6 +80,8 @@
 
   prevButton.addEventListener('click', () => {
     if (nowFirstSlide()) {
+      update(slidesLength - 1);
+
       return;
     }
 
